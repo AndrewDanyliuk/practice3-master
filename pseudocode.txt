@@ -1,0 +1,15 @@
+getClassification(int num)
+	if (getAliquotSum(num) == num)
+		print number is perfect
+	if (getAliquotSum(num) > num)
+		print number is abundant
+	if (getAliquotSum(num) < num)
+		print number is deficient
+	
+	
+int getAliquotSum(int num)
+	int AliquotSum = 0
+	for (int i = 1; i < num; ++i)
+		if (num % i == 0)
+			AliquotSum += i;
+	return AliquotSum;
